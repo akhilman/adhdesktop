@@ -1,0 +1,5 @@
+#!/bin/sh
+# Wallpaper
+awww-daemon &
+# Clipboard
+/usr/bin/wl-paste --watch cliphist store &

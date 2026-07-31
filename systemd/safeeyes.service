@@ -1,0 +1,16 @@
+[Unit]
+Description=SafeEyes – break reminder for Linux
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/safeeyes
+
+# Restart if it crashes or is stopped unintentionally
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+

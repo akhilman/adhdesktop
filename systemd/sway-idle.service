@@ -1,0 +1,23 @@
+[Unit]
+Description=Swayidle – idle handling for Niri
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=%t
+
+ExecStart=swayidle \
+	timeout 300 'niri msg action power-off-monitors' \
+	idlehint 300 \
+	timeout 600 'swaylock -f' \
+	timeout 7200 'systemctl suspend' \
+	before-sleep 'swaylock -f' \
+	lock 'swaylock -f'
+# Restart if the process crashes
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

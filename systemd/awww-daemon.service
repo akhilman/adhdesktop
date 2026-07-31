@@ -1,0 +1,17 @@
+[Unit]
+Description=Awww – wallpaper daemon
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=simple
+# Ensure the daemon runs in the user’s XDG environment
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=%t
+ExecStart=/usr/bin/awww-daemon
+# Restart if it crashes
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

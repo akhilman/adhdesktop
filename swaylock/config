@@ -1,0 +1,17 @@
+color=000000
+ring-color=282828
+text-color=ebebe9
+key-hl-color=d56199
+bs-hl-color=6197d5
+ring-clear-color=6197d5
+inside-clear-color=092648
+text-clear-color=ebebe9
+ring-wrong-color=dc2323
+inside-wrong-color=480909
+text-wrong-color=ebebe9
+ring-ver-color=d6dc23
+inside-ver-color=464809
+text-ver-color=ebebe9
+ring-radius=100
+indicator-radius=38
+indicator-thickness=5

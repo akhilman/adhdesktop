@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Labwc
+Comment=Wayland compositor based on wlroots
+Exec=labwc
+Icon=preferences-system-windows
+Type=Application
+Categories=System;
+Keywords=wayland;compositor;wm;window manager;
