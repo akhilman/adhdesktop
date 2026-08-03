@@ -1,7 +1,8 @@
 [Unit]
 Description=Watch Wayland clipboard and sync with cliphist
+PartOf=graphical-session.target
+Requires=graphical-session.target
 After=graphical-session.target
-Wants=graphical-session.target
 
 [Service]
 Type=simple
@@ -10,6 +11,3 @@ ExecStart=/usr/bin/wl-paste --watch cliphist store
 # Restart if it crashes
 Restart=on-failure
 RestartSec=5
-
-[Install]
-WantedBy=default.target

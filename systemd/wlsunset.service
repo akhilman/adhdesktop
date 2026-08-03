@@ -1,15 +1,12 @@
 [Unit]
 Description=Adjusts screen colour temperature for Wayland (wlsunset)
+PartOf=graphical-session.target
+Requires=graphical-session.target
 After=graphical-session.target
-Wants=graphical-session.target
 
 [Service]
 Type=simple
 # Adjust the command line as you like (e.g., set your own sunrise/sunset times)
 ExecStart=/usr/bin/wlsunset -t 3500 -l 53.9036 -L 86.0675
-# Restart if it exits unexpectedly
 Restart=on-failure
 RestartSec=5
-
-[Install]
-WantedBy=default.target
