@@ -15,6 +15,7 @@
 - kitty
 - niri
 - nautilus
+- playerctl
 - safeeyes
 - swayidle
 - swaylock
