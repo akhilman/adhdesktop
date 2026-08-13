@@ -1,4 +1,11 @@
-# Action Delayed Happily Desktop
+#  Another Day Home Desktop
+
+## Alternative names
+- Admission Hopeless Desktop
+- Adios Humans Desktop
+- Another Day Home Desktop
+- Action Delayed Happily Desktop
+
 
 ## Requried packages
 - awww
