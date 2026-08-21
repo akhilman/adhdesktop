@@ -24,3 +24,13 @@
 - wlsunset
 - jq - for fuzzel audio output selector
 - labwc - for stacking wm window
+
+## Notes
+
+### Dark theme in gtk-4 (non adwaita) apps
+
+Create/Edit ~/.config/gtk-4.0/settings.ini:
+```ini
+[Settings]
+gtk-application-prefer-dark-theme=true
+```
