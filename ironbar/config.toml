@@ -67,7 +67,7 @@ show_if = "ls /sys/class/power_supply/ | grep --quiet '^BAT'"
 
 [[monitors.DP-1.end]]
 type = "sys_info"
-format = ["{cpu_percent}% ", "{memory_percent}% "]
+format = ["{cpu_percent}% ", "{memory_percent}% ", "{disk_free@/home}GB 🖴"]
 
 [monitors.DP-1.end.interval]
 cpu = 1
