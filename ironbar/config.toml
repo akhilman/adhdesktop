@@ -11,6 +11,12 @@ type = "menu"
 label = ""
 height = 480
 
+[[monitors.DP-1.start.start]]
+type = "custom"
+label = "Home"
+icon = "user-home"
+on_click = "xdg-open ~/"
+
 [[monitors.DP-1.start]]
 type = "volume"
 format = "{icon} {percentage}%"
