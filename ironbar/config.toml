@@ -54,6 +54,7 @@ pause = ""
 [[monitors.DP-1.center]]
 type = "clock"
 format = "%H:%M"
+on_click_right = "gnome-calendar"
 
 [[monitors.DP-1.center]]
 type = "notifications"
