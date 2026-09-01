@@ -3,7 +3,7 @@
   --color-dark-secondary: #2d2d2d;
   --color-white: #fff;
   --color-active: #6699cc;
-  --color-urgent: #8f0a0a;
+  --color-urgent: #ff0a0a;
 
   --margin-lg: 0.8em;
   --margin-sm: 0.4em;
@@ -77,9 +77,19 @@ label {
   padding-right: var(--margin-lg);
 }
 
+.volume label,
 .item {
   padding-left: var(--margin-sm);
   padding-right: var(--margin-sm);
+}
+
+.volume .source {
+  opacity: 0.5;
+}
+
+.volume.recording .source {
+  color: var(--color-urgent);
+  opacity: 1.0;
 }
 
 .notifications,
@@ -105,11 +115,6 @@ button:active {
 
 .popup-clock .calendar .today {
   background-color: var(--color-active);
-}
-
-.mic-indicator {
-  color: #ff4444;
-  font-size: 1.2em;
 }
 
 /* --- custom: power menu ---  */

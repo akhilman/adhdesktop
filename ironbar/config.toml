@@ -31,14 +31,6 @@ volume_low = "󰕿"
 muted = "󰝟"
 
 [[monitors.DP-1.start]]
-type = "custom"
-
-[[monitors.DP-1.start.bar]]
-type = "label"
-class = "mic-indicator"
-label = "{{5000:pactl list source-outputs | grep -q 'stream.is-live = \"true\"' && echo '🎙' || echo ''}}"   
-
-[[monitors.DP-1.start]]
 type = "music"
 player_type = "mpris"
 format = "{title} / {artist}"

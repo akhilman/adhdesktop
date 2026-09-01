@@ -1,0 +1,15 @@
+[Unit]
+Description=Toggle ironbar microphone volume indicator when microphone is active
+PartOf=graphical-session.target
+Requires=graphical-session.target
+After=graphical-session.target
+PartOf=niri.service
+After=niri.service
+PartOf=ironbar.service
+After=ironbar.service
+
+[Service]
+Type=simple
+ExecStart=python3 ${HOME}/.config/adhdesktop/scripts/ironbar-mic-monitor.py
+Restart=on-failure
+RestartSec=5
