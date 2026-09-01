@@ -60,12 +60,12 @@ type = "notifications"
 show_count = true
 
 [monitors.DP-1.center.icons]
-closed_none = "󰂜"   # bell-outline
-closed_some = "󰂞"   # bell-ring
-closed_dnd  = "󰂠"   # bell-slash-outline
-open_none   = "󰂜"
-open_some   = "󰂞"
-open_dnd    = "󰂠"   
+closed_none = "󰂜" # bell-outline
+closed_some = "󰂞" # bell-ring
+closed_dnd = "󰂠"  # bell-slash-outline
+open_none = "󰂜"
+open_some = "󰂞"
+open_dnd = "󰂠"
 
 [[monitors.DP-1.end]]
 type = "battery"
