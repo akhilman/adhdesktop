@@ -5,8 +5,8 @@
   --color-active: #6699cc;
   --color-urgent: #8f0a0a;
 
-  --margin-lg: 1em;
-  --margin-sm: 0.5em;
+  --margin-lg: 0.8em;
+  --margin-sm: 0.4em;
 }
 
 * {
@@ -72,7 +72,19 @@ label {
   color: var(--color-white);
 }
 
-button {
+.widget {
+  padding-left: var(--margin-lg);
+  padding-right: var(--margin-lg);
+}
+
+.item {
+  padding-left: var(--margin-sm);
+  padding-right: var(--margin-sm);
+}
+
+.notifications,
+.notifications button,
+.clock {
   padding-left: var(--margin-sm);
   padding-right: var(--margin-sm);
 }
@@ -98,10 +110,6 @@ button:active {
 .mic-indicator {
   color: #ff4444;
   font-size: 1.2em;
-}
-
-.tray {
-  padding: 0 1.2em;
 }
 
 /* --- custom: power menu ---  */
