@@ -10,7 +10,6 @@ After=ironbar.service
 
 [Service]
 Type=simple
-# Adjust the command line as you like (e.g., set your own sunrise/sunset times)
 ExecStart=python3 ${HOME}/.config/adhdesktop/scripts/ironbar-overview-toggle.py
 Restart=on-failure
 RestartSec=5
