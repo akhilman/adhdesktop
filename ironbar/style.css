@@ -4,6 +4,7 @@
   --color-white: #fff;
   --color-active: #6699cc;
   --color-urgent: #ff0a0a;
+  --bg-alpha: 50%;
 
   --margin-lg: 0.8em;
   --margin-sm: 0.4em;
@@ -18,18 +19,15 @@
 }
 
 .background {
-  opacity: 0.9;
+  background-color: color-mix(in srgb, var(--color-dark-primary)
+    var(--bg-alpha), transparent);
 }
-
-/* .background.fullscreen {
-    opacity: 0.6;
-} */
 
 #bar,
 popover,
 popover contents,
 calendar {
-  background-color: var(--color-dark-primary);
+  background-color: transparent;
 }
 
 popover,

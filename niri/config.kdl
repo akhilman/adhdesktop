@@ -551,7 +551,13 @@ layer-rule {
     match namespace="ironbar"
     background-effect {
         blur true
-        // xray false
+        xray false
+    }
+    popups {
+        background-effect {
+            blur true
+            xray false
+        }
     }
 }
 
