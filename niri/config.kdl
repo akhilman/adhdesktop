@@ -525,14 +525,6 @@ window-rule {
     }
 }
 
-layer-rule {
-    match namespace="ironbar"
-    background-effect {
-        blur true
-        // xray false
-    }
-}
-
 window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=10 y=10 relative-to="bottom-right"
@@ -554,6 +546,14 @@ window-rule {
 
 //     block-out-from "screencast"
 // }
+
+layer-rule {
+    match namespace="ironbar"
+    background-effect {
+        blur true
+        // xray false
+    }
+}
 
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
