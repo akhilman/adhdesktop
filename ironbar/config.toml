@@ -37,7 +37,7 @@ format = "{title} / {artist}"
 
 [monitors.DP-1.start.truncate]
 mode = "end"
-max_length = 64
+max_length = 32
 
 [monitors.DP-1.start.icons]
 play = ""
