@@ -525,6 +525,14 @@ window-rule {
     }
 }
 
+layer-rule {
+    match namespace="ironbar"
+    background-effect {
+        blur true
+        // xray false
+    }
+}
+
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {

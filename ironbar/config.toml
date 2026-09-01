@@ -1,0 +1,117 @@
+
+[monitors.DP-1]
+name = "main"
+position = "top"
+height = 32
+exclusive_zone = false
+start_hidden = true
+
+[[monitors.DP-1.start]]
+type = "menu"
+label = ""
+height = 480
+
+[[monitors.DP-1.start]]
+type = "volume"
+format = "{icon} {percentage}%"
+max_volume = 100
+on_scroll_up = "pactl set-sink-volume @DEFAULT_SINK@ +2%"
+on_scroll_down = "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+
+[monitors.DP-1.start.icons]
+volume_high = "󰕾"
+volume_medium = "󰖀"
+volume_low = "󰕿"
+muted = "󰝟"
+
+[[monitors.DP-1.start]]
+type = "custom"
+
+[[monitors.DP-1.start.bar]]
+type = "label"
+class = "mic-indicator"
+label = "{{5000:pactl list source-outputs | grep -q 'stream.is-live = \"true\"' && echo '🎙' || echo ''}}"   
+
+[[monitors.DP-1.start]]
+type = "music"
+player_type = "mpris"
+format = "{title} / {artist}"
+
+[monitors.DP-1.start.truncate]
+mode = "end"
+max_length = 64
+
+[monitors.DP-1.start.icons]
+play = ""
+pause = ""
+
+[[monitors.DP-1.center]]
+type = "clock"
+format = "%H:%M"
+
+[[monitors.DP-1.center]]
+type = "notifications"
+show_count = true
+
+[monitors.DP-1.center.icons]
+closed_none = "󰂜"   # bell-outline
+closed_some = "󰂞"   # bell-ring
+closed_dnd  = "󰂠"   # bell-slash-outline
+open_none   = "󰂜"
+open_some   = "󰂞"
+open_dnd    = "󰂠"   
+
+[[monitors.DP-1.end]]
+type = "battery"
+show_if = "ls /sys/class/power_supply/ | grep --quiet '^BAT'"
+
+[[monitors.DP-1.end]]
+type = "sys_info"
+format = ["{cpu_percent}% ", "{memory_percent}% "]
+
+[monitors.DP-1.end.interval]
+cpu = 1
+
+[[monitors.DP-1.end]]
+type = "tray"
+
+
+[[monitors.DP-1.end]]
+type = "custom"
+name = "power-menu"
+class = "power-menu"
+
+[[monitors.DP-1.end.bar]]
+type = "button"
+name = "power-btn"
+label = ""
+on_click = "popup:toggle"
+
+[[monitors.DP-1.end.popup]]
+type = "box"
+orientation = "vertical"
+name = "buttons"
+
+[[monitors.DP-1.end.popup.widgets]]
+type = "button"
+class = "power-btn"
+label = "<span></span>"
+on_click = "!swaylock"
+
+[[monitors.DP-1.end.popup.widgets]]
+type = "button"
+class = "power-btn"
+label = "<span>󰤄</span>"
+on_click = "!swaylock && systemctl suspend"
+
+[[monitors.DP-1.end.popup.widgets]]
+type = "button"
+class = "power-btn"
+label = "<span>󰜉</span>"
+on_click = "!systemctl reboot"
+
+[[monitors.DP-1.end.popup.widgets]]
+type = "button"
+class = "power-btn"
+label = "<span>󰐥</span>"
+on_click = "!systemctl poweroff"
