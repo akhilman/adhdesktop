@@ -12,6 +12,7 @@
 - cliphist
 - fcitx5
 - fuzzel
+- ironbar
 - kitty
 - niri
 - nautilus
