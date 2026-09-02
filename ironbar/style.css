@@ -31,13 +31,13 @@ label {
     var(--bg-alpha), transparent);
 }
 
-window {
-  padding: var(--margin-sm);
-}
-
 popover {
   padding: var(--margin-lg);
   border-radius: var(--border-radius);
+}
+
+#bar {
+  margin: var(--margin-sm);
 }
 
 #bar,
