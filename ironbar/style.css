@@ -128,6 +128,7 @@ button:active {
 .clock {
   font-weight: bold;
   font-size: 1.5em;
+  padding-bottom: 0.2em;
 }
 
 .popup-clock .calendar-clock {
