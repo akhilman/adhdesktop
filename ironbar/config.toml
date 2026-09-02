@@ -93,7 +93,7 @@ on_click = "!swaylock"
 type = "button"
 class = "power-btn"
 label = "<span>󰤄</span>"
-on_click = "!swaylock && systemctl suspend"
+on_click = "!systemctl suspend"
 
 [[monitors.DP-1.end.popup.widgets]]
 type = "button"
