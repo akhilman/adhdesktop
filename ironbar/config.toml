@@ -87,7 +87,7 @@ name = "buttons"
 type = "button"
 class = "power-btn"
 label = "<span></span>"
-on_click = "!swaylock"
+on_click = "!swaylock -f"
 
 [[monitors.DP-1.end.popup.widgets]]
 type = "button"
