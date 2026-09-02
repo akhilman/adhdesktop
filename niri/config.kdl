@@ -607,11 +607,14 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-; sh ~/.config/adhdesktop/scripts/volume-notification.sh"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; sh ~/.config/adhdesktop/scripts/volume-notification.sh"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle; sh ~/.config/adhdesktop/scripts/volume-notification.sh"; }
-    Ctrl+XF86AudioPlay    allow-when-locked=true { spawn-sh "sh ~/.config/adhdesktop/scripts/fuzzel-audio-sink.sh"; }
 
     XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
+
+    Ctrl+XF86AudioPlay   allow-when-locked=true { spawn-sh "sh ~/.config/adhdesktop/scripts/fuzzel-audio-sink.sh"; }
+    Ctrl+XF86AudioNext   allow-when-locked=true { spawn "playerctld" "shift"; }
+    Ctrl+XF86AudioPrev   allow-when-locked=true { spawn "playerctld" "unshift"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
