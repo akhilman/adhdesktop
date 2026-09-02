@@ -56,7 +56,7 @@ show_if = "ls /sys/class/power_supply/ | grep --quiet '^BAT'"
 
 [[monitors.DP-1.end]]
 type = "sys_info"
-format = ["{cpu_percent}% ", "{memory_percent}% ", "{disk_free@/home}GB 🖴"]
+format = ["{cpu_percent}% ", "{memory_percent}% ", "{disk_free@/home}GB "]
 
 [monitors.DP-1.end.interval]
 cpu = 1
@@ -75,7 +75,7 @@ class = "power-menu"
 [[monitors.DP-1.end.bar]]
 type = "button"
 name = "power-btn"
-label = ""
+label = "󰐥"
 on_click = "popup:toggle"
 
 [[monitors.DP-1.end.popup]]
