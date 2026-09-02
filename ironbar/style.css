@@ -2,12 +2,14 @@
   --color-dark-primary: #0c0c0c;
   --color-dark-secondary: #2d2d2d;
   --color-white: #fff;
-  --color-active: #6699cc;
+  --color-active: #d56199;
   --color-urgent: #ff0a0a;
-  --bg-alpha: 50%;
+  --bg-alpha: 60%;
 
   --margin-lg: 0.8em;
   --margin-sm: 0.4em;
+  --border-width: 2px;
+  --border-radius: 12px;
 }
 
 * {
@@ -18,9 +20,24 @@
   font-family: monospace;
 }
 
+button,
+label {
+  margin: 0;
+  padding: 0;
+}
+
 .background {
   background-color: color-mix(in srgb, var(--color-dark-primary)
     var(--bg-alpha), transparent);
+}
+
+window {
+  padding: var(--margin-sm);
+}
+
+popover {
+  padding: var(--margin-lg);
+  border-radius: var(--border-radius);
 }
 
 #bar,
@@ -30,14 +47,9 @@ calendar {
   background-color: transparent;
 }
 
-popover,
-popover contents {
-  padding: 12px;
-  border-radius: 12px;
-}
-
 scale > trough {
   background-color: var(--color-dark-secondary);
+  margin: var(--margin-sm);
 }
 
 scale > trough > highlight {
@@ -49,6 +61,7 @@ scale > trough > highlight {
 
 scale > trough > slider {
   background-color: var(--color-white);
+  border-radius: var(--border-radius);
 }
 
 switch > slider {
@@ -71,14 +84,29 @@ label {
 }
 
 .widget {
-  padding-left: var(--margin-lg);
-  padding-right: var(--margin-lg);
+  margin-left: var(--margin-lg);
+  margin-right: var(--margin-lg);
 }
 
-.volume label,
+button,
 .item {
   padding-left: var(--margin-sm);
   padding-right: var(--margin-sm);
+}
+
+button {
+  border: var(--border-width) solid transparent;
+}
+
+button:hover,
+button:active {
+  border-radius: var(--border-radius);
+  border-color: var(--color-active);
+}
+
+.volume label {
+  margin-left: var(--margin-sm);
+  margin-right: var(--margin-sm);
 }
 
 .volume .source {
@@ -93,13 +121,8 @@ label {
 .notifications,
 .notifications button,
 .clock {
-  padding-left: var(--margin-sm);
-  padding-right: var(--margin-sm);
-}
-
-button:hover,
-button:active {
-  background-color: var(--color-dark-secondary);
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .clock {
@@ -111,16 +134,11 @@ button:active {
   font-size: 2.0em;
 }
 
+.popup-clock .calendar {
+  border: var(--border-width) solid transparent;
+}
+
 .popup-clock .calendar .today {
-  background-color: var(--color-active);
-}
-
-/* --- custom: power menu ---  */
-
-.popup-power-menu #header {
-  margin-bottom: 0.6em;
-}
-
-.popup-power-menu .power-btn {
-  border-radius: 10px;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-active);
 }
