@@ -64,9 +64,6 @@ cpu = 1
 
 [[monitors.DP-1.end]]
 type = "tray"
-on_click_left = "menu"
-on_click_right = "default"
-on_click_middle = "secondary"
 
 [[monitors.DP-1.end]]
 type = "custom"
