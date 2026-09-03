@@ -41,6 +41,7 @@ on_click_right = "gnome-calendar"
 [[monitors.DP-1.center]]
 type = "notifications"
 show_count = true
+on_click_right = "swaync-client -d"
 
 [monitors.DP-1.center.icons]
 closed_none = "󰂜" # bell-outline
