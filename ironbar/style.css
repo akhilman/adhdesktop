@@ -118,6 +118,14 @@ button:active {
   opacity: 1.0;
 }
 
+#player-select {
+  margin-right: 0;
+}
+
+#player-control {
+  margin-left: 0;
+}
+
 .notifications,
 .notifications button,
 .clock {

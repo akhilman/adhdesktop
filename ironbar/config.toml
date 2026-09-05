@@ -25,9 +25,27 @@ on_scroll_up = "pactl set-sink-volume @DEFAULT_SINK@ +2%"
 on_scroll_down = "pactl set-sink-volume @DEFAULT_SINK@ -2%"
 
 [[monitors.DP-1.start]]
+type = "custom"
+name = "player-select"
+style = "player-select"
+show_if = "[ $(playerctl -l | wc -l) -gt 1 ]"
+
+[[monitors.DP-1.start.bar]]
+type = "button"
+label = ""
+on_click_left = "playerctld shift"
+on_click_right = "playerctl unshift"
+tooltip = "Cycle active MPRIS player"
+
+[[monitors.DP-1.start]]
 type = "music"
+name = "player-control"
 player_type = "mpris"
 format = "{title} / {artist}"
+format_idle = "⏹"
+on_click_middle = "playerctl stop"
+on_scroll_up = "playerctl position 2-"
+on_scroll_down = "playerctl position 2+"
 
 [monitors.DP-1.start.truncate]
 mode = "end"
