@@ -18,11 +18,43 @@ icon = "user-home"
 on_click = "xdg-open ~/"
 
 [[monitors.DP-1.start]]
-type = "volume"
-format = "{icon} {percentage}%"
-max_volume = 100
-on_scroll_up = "pactl set-sink-volume @DEFAULT_SINK@ +2%"
-on_scroll_down = "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+type = "custom"
+class = "volume"
+on_click_right = "pwvucontrol"
+on_click_left = "python3 ~/.config/adhdesktop/scripts/volume-control.py toggle"
+on_scroll_up = "python3 ~/.config/adhdesktop/scripts/volume-control.py 2+"
+on_scroll_down = "python3 ~/.config/adhdesktop/scripts/volume-control.py 2-"
+
+[[monitors.DP-1.start.bar]]
+type = "script"
+cmd = "python3 ~/.config/adhdesktop/scripts/ironbar-audio-sink-volume.py"
+mode = "watch"
+class = "sink"
+
+[[monitors.DP-1.start.bar]]
+type = "label"
+label = "󰍬"
+class = "privacy"
+show_if = "#privacy_active_microphone"
+
+[[monitors.DP-1.start.bar]]
+type = "label"
+label = ""
+class = "privacy"
+show_if = "#privacy_active_webcam"
+
+[[monitors.DP-1.start.bar]]
+type = "label"
+label = "󰹑"
+class = "privacy"
+show_if = "#privacy_active_screencast"
+
+# [[monitors.DP-1.start]]
+# type = "volume"
+# format = "{icon} {percentage}%"
+# max_volume = 100
+# on_scroll_up = "pactl set-sink-volume @DEFAULT_SINK@ +2%"
+# on_scroll_down = "pactl set-sink-volume @DEFAULT_SINK@ -2%"
 
 [[monitors.DP-1.start]]
 type = "custom"

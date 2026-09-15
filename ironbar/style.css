@@ -94,12 +94,14 @@ button,
   padding-right: var(--margin-sm);
 }
 
-button {
+button,
+box.volume {
   border: var(--border-width) solid transparent;
 }
 
 button:hover,
-button:active {
+button:active,
+box.volume:hover {
   border-radius: var(--border-radius);
   border-color: var(--color-active);
 }
@@ -109,13 +111,8 @@ button:active {
   margin-right: var(--margin-sm);
 }
 
-.volume .source {
-  opacity: 0.5;
-}
-
-.volume.recording .source {
+.volume .privacy {
   color: var(--color-urgent);
-  opacity: 1.0;
 }
 
 #player-select {

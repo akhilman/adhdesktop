@@ -1,5 +1,5 @@
 [Unit]
-Description=Toggle ironbar microphone volume indicator when microphone is active
+Description=Toggle ironbar microphone, webcamera and screencast indicators
 PartOf=graphical-session.target
 Requires=graphical-session.target
 After=graphical-session.target
@@ -10,6 +10,9 @@ After=ironbar.service
 
 [Service]
 Type=simple
-ExecStart=python3 ${HOME}/.config/adhdesktop/scripts/ironbar-mic-monitor.py
+ExecStart=python3 ${HOME}/.config/adhdesktop/scripts/ironbar-privacy-monitor.py
 Restart=on-failure
 RestartSec=5
+
+[Install]
+WantedBy=ironbar.service
