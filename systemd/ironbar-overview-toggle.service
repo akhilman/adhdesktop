@@ -13,3 +13,6 @@ Type=simple
 ExecStart=python3 ${HOME}/.config/adhdesktop/scripts/ironbar-overview-toggle.py
 Restart=on-failure
 RestartSec=5
+
+[Install]
+WantedBy=ironbar.service
