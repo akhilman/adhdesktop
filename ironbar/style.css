@@ -95,13 +95,15 @@ button,
 }
 
 button,
-box.volume {
+box.volume,
+box.sysinfo {
   border: var(--border-width) solid transparent;
 }
 
 button:hover,
 button:active,
-box.volume:hover {
+box.volume:hover,
+box.sysinfo:hover {
   border-radius: var(--border-radius);
   border-color: var(--color-active);
 }
