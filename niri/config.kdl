@@ -612,7 +612,7 @@ binds {
     XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
 
-    Ctrl+XF86AudioPlay   allow-when-locked=true { spawn-sh "sh ~/.config/adhdesktop/scripts/fuzzel-audio-sink.sh"; }
+    Ctrl+XF86AudioPlay   allow-when-locked=true { spawn-sh "python3 ~/.config/adhdesktop/scripts/fuzzel-audio-sink.py"; }
     Ctrl+XF86AudioNext   allow-when-locked=true { spawn "playerctld" "shift"; }
     Ctrl+XF86AudioPrev   allow-when-locked=true { spawn "playerctld" "unshift"; }
 
