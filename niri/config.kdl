@@ -603,10 +603,10 @@ binds {
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+; sh ~/.config/adhdesktop/scripts/volume-notification.sh"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-; sh ~/.config/adhdesktop/scripts/volume-notification.sh"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; sh ~/.config/adhdesktop/scripts/volume-notification.sh"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle; sh ~/.config/adhdesktop/scripts/volume-notification.sh"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "python3 ~/.config/adhdesktop/scripts/volume-control.py 2+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "python3 ~/.config/adhdesktop/scripts/volume-control.py 2-"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "python3 ~/.config/adhdesktop/scripts/volume-control.py toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
