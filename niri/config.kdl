@@ -546,6 +546,14 @@ window-rule {
 
 layer-rule {
     match namespace="ironbar"
+    geometry-corner-radius 12
+    shadow {
+        on
+        draw-behind-window false
+        spread -4
+        // softness 16
+        // offset x=0 y=4
+    }
     background-effect {
         blur true
         xray false

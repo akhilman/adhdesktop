@@ -31,13 +31,21 @@ label {
     var(--bg-alpha), transparent);
 }
 
-popover {
-  padding: var(--margin-lg);
+#main {
   border-radius: var(--border-radius);
 }
 
-#bar {
-  margin: var(--margin-sm);
+#main #bar {
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--color-dark-primary)
+    var(--bg-alpha), transparent);
+  border-width: 0.2em;
+}
+
+popover {
+  padding: var(--margin-lg);
+  border-radius: var(--border-radius);
 }
 
 #bar,
@@ -135,7 +143,6 @@ box.sysinfo:hover {
 .clock {
   font-weight: bold;
   font-size: 1.5em;
-  margin-bottom: 0.2em;
 }
 
 .popup-clock .calendar-clock {
