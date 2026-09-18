@@ -43,8 +43,18 @@ label {
 }
 
 popover {
-  padding: var(--margin-lg);
   border-radius: var(--border-radius);
+}
+
+popover contents {
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-color: var(--color-dark-primary);
+  border-width: 0.2em;
+}
+
+popover .popup {
+  margin: var(--margin-lg);
 }
 
 #bar,
