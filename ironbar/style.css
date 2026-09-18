@@ -38,8 +38,7 @@ label {
 #main #bar {
   border-radius: var(--border-radius);
   border-style: solid;
-  border-color: color-mix(in srgb, var(--color-dark-primary)
-    var(--bg-alpha), transparent);
+  border-color: var(--color-dark-primary);
   border-width: 0.2em;
 }
 
