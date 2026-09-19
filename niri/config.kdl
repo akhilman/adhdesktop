@@ -558,13 +558,6 @@ layer-rule {
         blur true
         xray false
     }
-    popups {
-        geometry-corner-radius 12
-        background-effect {
-            blur true
-            xray false
-        }
-    }
 }
 
 layer-rule {

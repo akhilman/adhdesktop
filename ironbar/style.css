@@ -1,10 +1,11 @@
 :root {
   --color-dark-primary: #0c0c0c;
-  --color-dark-secondary: #2d2d2d;
+  --color-dark-secondary: #444447;
   --color-white: #fff;
   --color-active: #d56199;
   --color-urgent: #ff0a0a;
-  --bg-alpha: 60%;
+  --bar-alpha: 60%;
+  --popover-alpha: 90%;
 
   --margin-lg: 0.8em;
   --margin-sm: 0.4em;
@@ -20,48 +21,43 @@
   font-family: monospace;
 }
 
-button,
-label {
-  margin: 0;
-  padding: 0;
-}
-
-.background {
-  background-color: color-mix(in srgb, var(--color-dark-primary)
-    var(--bg-alpha), transparent);
-}
-
-#main {
+#main,
+#main #bar,
+popover,
+popover contents {
   border-radius: var(--border-radius);
 }
 
 #main #bar {
-  border-radius: var(--border-radius);
   border-style: solid;
   border-color: var(--color-dark-primary);
-  border-width: 0.2em;
-}
-
-popover {
-  border-radius: var(--border-radius);
+  border-width: 2px;
 }
 
 popover contents {
-  border-radius: var(--border-radius);
   border-style: solid;
-  border-color: var(--color-dark-primary);
-  border-width: 0.2em;
+  border-color: var(--color-dark-secondary);
+  border-width: 2px;
+}
+
+#main {
+  background-color: color-mix(in srgb, var(--color-dark-primary)
+    var(--bar-alpha), transparent);
+}
+
+popover contents,
+calendar {
+  background-color: color-mix(in srgb, var(--color-dark-primary)
+    var(--popover-alpha), transparent);
+}
+
+popover > arrow,
+popover separator {
+  background-color: var(--color-dark-secondary);
 }
 
 popover .popup {
   margin: var(--margin-lg);
-}
-
-#bar,
-popover,
-popover contents,
-calendar {
-  background-color: transparent;
 }
 
 scale > trough {
@@ -103,6 +99,12 @@ label {
 .widget {
   margin-left: var(--margin-lg);
   margin-right: var(--margin-lg);
+}
+
+button,
+label {
+  margin: 0;
+  padding: 0;
 }
 
 button,
