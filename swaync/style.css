@@ -1,10 +1,10 @@
 :root {
-  --cc-bg: rgba(10, 10, 10, 0.9);
-  --cc-border-color: rgba(213, 97, 153, 1.0);
+  --cc-bg: #0c0c0cf2;
+  --cc-border-color: #d56199;
   --cc-border: 4px solid var(--cc-border-color);
-  --noti-bg: 18, 18, 18;
-  --noti-bg-alpha: 1.0;
   --border-radius: 12px;
+  --noti-border-color: #404040;
+  --noti-border: 2px solid var(--noti-border-color);
 }
 
 .control-center {
@@ -26,4 +26,6 @@ notificationwindow {
 
 .notification {
   padding: 8px;
+  background: var(--cc-bg);
+  border: var(--noti-border);
 }

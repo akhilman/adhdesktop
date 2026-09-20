@@ -1,11 +1,11 @@
 :root {
   --color-dark-primary: #0c0c0c;
-  --color-dark-secondary: #444447;
+  --color-dark-secondary: #404040;
   --color-white: #fff;
   --color-active: #d56199;
   --color-urgent: #ff0a0a;
   --bar-alpha: 60%;
-  --popover-alpha: 90%;
+  --popover-alpha: 95%;
 
   --margin-lg: 0.8em;
   --margin-sm: 0.4em;
@@ -45,10 +45,13 @@ popover contents {
     var(--bar-alpha), transparent);
 }
 
-popover contents,
-calendar {
+popover contents {
   background-color: color-mix(in srgb, var(--color-dark-primary)
     var(--popover-alpha), transparent);
+}
+
+calendar {
+  background-color: transparent;
 }
 
 popover > arrow,
