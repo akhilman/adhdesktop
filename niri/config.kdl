@@ -528,6 +528,15 @@ window-rule {
     draw-border-with-background false
 }
 
+window-rule {
+    match app-id="one.alynx.showmethekey" title=r#"^Floating Window.*"#
+    open-floating true
+    default-column-width { fixed 800; }
+    default-window-height { fixed 64; }
+    default-floating-position x=32 y=32 relative-to="top-right"
+    shadow { off; }
+}
+
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
