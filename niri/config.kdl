@@ -339,6 +339,10 @@ overview {
 
 cursor {
     xcursor-theme "Breeze_Light"
+
+    hide-when-typing
+    hide-after-inactive-ms 5000
+
 }
 
 
