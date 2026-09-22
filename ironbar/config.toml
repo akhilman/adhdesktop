@@ -154,6 +154,12 @@ on_click = "!systemctl suspend"
 
 [[monitors.DP-1.end.popup.widgets]]
 type = "button"
+tooltip = "Exit from Niri"
+label = "<span>󰈆</span>"
+on_click = "!niri msg action quit"
+
+[[monitors.DP-1.end.popup.widgets]]
+type = "button"
 tooltip = "Reboot"
 label = "<span>󰜉</span>"
 on_click = "!systemctl reboot"
