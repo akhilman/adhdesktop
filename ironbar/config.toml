@@ -142,24 +142,24 @@ name = "buttons"
 
 [[monitors.DP-1.end.popup.widgets]]
 type = "button"
-class = "power-btn"
+tooltip = "Lock the screen"
 label = "<span></span>"
 on_click = "!swaylock -f"
 
 [[monitors.DP-1.end.popup.widgets]]
 type = "button"
-class = "power-btn"
+tooltip = "Suspend"
 label = "<span>󰤄</span>"
 on_click = "!systemctl suspend"
 
 [[monitors.DP-1.end.popup.widgets]]
 type = "button"
-class = "power-btn"
+tooltip = "Reboot"
 label = "<span>󰜉</span>"
 on_click = "!systemctl reboot"
 
 [[monitors.DP-1.end.popup.widgets]]
 type = "button"
-class = "power-btn"
+tooltip = "Power off"
 label = "<span>󰐥</span>"
 on_click = "!systemctl poweroff"
