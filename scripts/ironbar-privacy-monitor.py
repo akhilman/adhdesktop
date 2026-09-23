@@ -46,6 +46,22 @@ def set_ironbar_variable(name, value):
     )
 
 
+def add_style(module, class_name):
+    subprocess.run(
+        ["ironbar", "style", "add-class", module, class_name],
+        check=True,
+        stdout=subprocess.DEVNULL,
+    )
+
+
+def remove_style(module, class_name):
+    subprocess.run(
+        ["ironbar", "style", "remove-class", module, class_name],
+        check=True,
+        stdout=subprocess.DEVNULL,
+    )
+
+
 def update_variables(nodes):
     microphone_active = any(
         node["media_class"] == AUDIO_SOURCE and node["state"] == "running"
@@ -63,6 +79,11 @@ def update_variables(nodes):
         node["media_class"] == VIDEO_STREAM and node["state"] == "running"
         for node in nodes.values()
     )
+
+    if microphone_active:
+        add_style("volume", "recording")
+    else:
+        remove_style("volume", "recording")
 
     set_ironbar_variable(MICROPHONE_VARIABLE, microphone_active)
     set_ironbar_variable(WEBCAM_VARIABLE, webcam_active)

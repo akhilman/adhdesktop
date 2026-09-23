@@ -135,7 +135,7 @@ box.sysinfo:hover {
   margin-right: var(--margin-sm);
 }
 
-.volume .privacy {
+#volume.recording .source {
   color: var(--color-urgent);
 }
 
