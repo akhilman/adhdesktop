@@ -21,6 +21,10 @@
   font-family: monospace;
 }
 
+#main {
+  min-width: 1552px;
+}
+
 #main,
 #main #bar,
 popover,
@@ -61,6 +65,11 @@ popover separator {
 
 popover .popup {
   margin: var(--margin-lg);
+}
+
+#main #center {
+  margin-left: var(--margin-lg);
+  margin-right: var(--margin-lg);
 }
 
 scale > trough {
