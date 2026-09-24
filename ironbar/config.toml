@@ -31,19 +31,6 @@ on_scroll_up = "python3 ~/.config/adhdesktop/scripts/volume-control.py 2+"
 on_scroll_down = "python3 ~/.config/adhdesktop/scripts/volume-control.py 2-"
 
 [[monitors.DP-1.start]]
-type = "custom"
-name = "player-select"
-style = "player-select"
-show_if = "[ $(playerctl -l | wc -l) -gt 1 ]"
-
-[[monitors.DP-1.start.bar]]
-type = "button"
-label = ""
-on_click_left = "playerctld shift"
-on_click_right = "playerctl unshift"
-tooltip = "Cycle active MPRIS player"
-
-[[monitors.DP-1.start]]
 type = "music"
 name = "player-control"
 player_type = "mpris"
