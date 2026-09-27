@@ -1,16 +1,23 @@
 :root {
   --color-dark-primary: #0c0c0c;
   --color-dark-secondary: #404040;
+  --color-hover: #ffffff14;
   --color-white: #fff;
   --color-active: #d56199;
   --color-urgent: #ff0a0a;
   --bar-alpha: 60%;
   --popover-alpha: 95%;
 
-  --margin-lg: 0.8em;
-  --margin-sm: 0.4em;
+  --margin-widget: 8px;
+  --margin-tray: 4px;
+  --margin-vert: 2px;
   --border-width: 2px;
-  --border-radius: 12px;
+  --border-radius-window: 12px;
+  --border-radius-button: 9px;
+}
+
+#main {
+  min-width: 1200px;
 }
 
 * {
@@ -21,27 +28,61 @@
   font-family: monospace;
 }
 
-#main {
-  min-width: 1552px;
+#start .widget,
+#end .widget {
+  margin-left: var(--margin-widget);
+  margin-right: var(--margin-widget);
+}
+
+.widget.menu,
+.widget.volume,
+.widget.music,
+.widget.clock,
+.widget.notifications > .button,
+.widget.battary,
+.widget.sysinfo,
+#power-btn {
+  padding-left: var(--margin-widget);
+  padding-right: var(--margin-widget);
+  padding-top: vert(--margin-vert);
+  padding-bottom: vert(--margin-vert);
+}
+
+.widget.tray > .item {
+  padding-left: var(--margin-tray);
+  padding-right: var(--margin-tray);
+  padding-top: vert(--margin-vert);
+  padding-bottom: vert(--margin-vert);
+}
+
+button:hover,
+button:active,
+button.open,
+box.volume:hover,
+box.sysinfo:hover,
+.menu modelbutton:active,
+.menu modelbutton:hover {
+  background: var(--color-hover);
+  border-radius: var(--border-radius-button);
 }
 
 #main,
 #main #bar,
 popover,
 popover contents {
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-window);
 }
 
 #main #bar {
   border-style: solid;
   border-color: var(--color-dark-primary);
-  border-width: 2px;
+  border-width: var(--border-width);
 }
 
 popover contents {
   border-style: solid;
   border-color: var(--color-dark-secondary);
-  border-width: 2px;
+  border-width: var(--border-width);
 }
 
 #main {
@@ -63,18 +104,9 @@ popover separator {
   background-color: var(--color-dark-secondary);
 }
 
-popover .popup {
-  margin: var(--margin-lg);
-}
-
-#main #center {
-  margin-left: var(--margin-lg);
-  margin-right: var(--margin-lg);
-}
-
 scale > trough {
   background-color: var(--color-dark-secondary);
-  margin: var(--margin-sm);
+  margin: var(--margin-widget);
 }
 
 scale > trough > highlight {
@@ -86,7 +118,7 @@ scale > trough > highlight {
 
 scale > trough > slider {
   background-color: var(--color-white);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-window);
 }
 
 switch > slider {
@@ -108,40 +140,13 @@ label {
   color: var(--color-white);
 }
 
-.widget {
-  margin-left: var(--margin-lg);
-  margin-right: var(--margin-lg);
-}
-
-button,
-label {
+.widget > .item {
   margin: 0;
   padding: 0;
 }
 
-button,
-.item {
-  padding-left: var(--margin-sm);
-  padding-right: var(--margin-sm);
-}
-
-button,
-box.volume,
-box.sysinfo {
-  border: var(--border-width) solid transparent;
-}
-
-button:hover,
-button:active,
-box.volume:hover,
-box.sysinfo:hover {
-  border-radius: var(--border-radius);
-  border-color: var(--color-active);
-}
-
-.volume label {
-  margin-left: var(--margin-sm);
-  margin-right: var(--margin-sm);
+.volume label:not(:first-child) {
+  margin-left: var(--margin-widget);
 }
 
 #volume.recording .source {
@@ -154,13 +159,6 @@ box.sysinfo:hover {
 
 #player-control {
   margin-left: 0;
-}
-
-.notifications,
-.notifications button,
-.clock {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .clock {
@@ -177,6 +175,11 @@ box.sysinfo:hover {
 }
 
 .popup-clock .calendar .today {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-active);
+  border-radius: 50%;
+  background: var(--color-active);
+  font-weight: bold;
+}
+
+.power-menu .text-button {
+  padding: 4px 4px;
 }

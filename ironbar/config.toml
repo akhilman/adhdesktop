@@ -44,7 +44,7 @@ on_scroll_down = "playerctl position 2+"
 
 [monitors.DP-1.start.truncate]
 mode = "middle"
-max_length = 48
+max_length = 32
 
 [monitors.DP-1.start.marquee_popup_artist]
 enable = true
