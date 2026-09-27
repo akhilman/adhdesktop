@@ -3,3 +3,5 @@
 awww-daemon --namespace labwc &
 # Clipboard
 /usr/bin/wl-paste --watch cliphist store &
+# Panel
+waybar &

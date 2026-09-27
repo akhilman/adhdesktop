@@ -25,6 +25,7 @@
 - wlsunset
 - jq - for fuzzel audio output selector
 - labwc - for stacking wm window
+- waybar - for a bar within labwc
 
 ## Notes
 

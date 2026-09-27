@@ -1,0 +1,79 @@
+* {
+  font-family: Cantarell, "Noto Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+window#waybar {
+  min-height: 26px;
+  background: rgba(10,10,10,0.7);
+  color: #deddda;
+}
+
+/* Remove default spacing and rounded surfaces */
+#custom-xdg-menu,
+#taskbar,
+#custom-exit {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+/* App menu */
+#custom-xdg-menu {
+  min-width: 24px;
+  padding: 0 12px;
+  color: #ffffff;
+  background: #4e4c54;
+}
+
+#custom-xdg-menu:hover {
+  background: #77767b;
+}
+
+#custom-xdg-menu:active {
+  background: #45434a;
+}
+
+/* Window list */
+#taskbar {
+  padding: 0 4px;
+}
+
+#taskbar button {
+  /* min-width: 26px; */
+  /* min-height: 26px; */
+  margin: 0;
+  padding: 0 8px;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+#taskbar button.active {
+  color: #ffffff;
+  background: #4e4c54;
+}
+
+#taskbar button:hover {
+  background: #77767b;
+}
+
+/* Exit button */
+#custom-exit {
+  min-width: 24px;
+  padding: 0 12px;
+  color: #ffffff;
+  background: #4e4c54;
+}
+
+#custom-exit:hover {
+  background: #77767b;
+}
+
+#custom-exit:active {
+  background: #45434a;
+}

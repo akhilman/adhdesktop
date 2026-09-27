@@ -1,0 +1,45 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 32,
+  "spacing": 4,
+
+  "modules-left": [
+    "custom/xdg-menu"
+  ],
+
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+
+  "modules-right": [
+    "custom/exit"
+  ],
+
+  "custom/xdg-menu": {
+    "format": "☰",
+    "tooltip": true,
+    "tooltip-format": "Applications",
+    "on-click": "xfce4-appfinder"
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "tooltip": true,
+    "tooltip-format": "{title}",
+    "all-outputs": true,
+    "on-click": "minimize-raise",
+    "on-click-middle": "close",
+    "active-first": false,
+    "justify": "center"
+  },
+
+  "custom/exit": {
+    "format": "󰤆",
+    "tooltip": true,
+    "tooltip-format": "Exit labwc",
+    "on-click": "labwc --exit"
+  }
+}
+
