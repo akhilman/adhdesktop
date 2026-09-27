@@ -1,5 +1,5 @@
 #!/bin/sh
 # Wallpaper
-awww-daemon &
+awww-daemon --namespace labwc &
 # Clipboard
 /usr/bin/wl-paste --watch cliphist store &
