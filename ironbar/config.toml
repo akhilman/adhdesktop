@@ -123,7 +123,7 @@ on_click = "!systemctl suspend"
 type = "button"
 tooltip = "Exit from Niri"
 label = "<span>󰈆</span>"
-on_click = "!niri msg action quit"
+on_click = "!niri msg action quit --skip-confirmation"
 
 [[monitors.DP-1.end.popup.widgets]]
 type = "button"
