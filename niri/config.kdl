@@ -460,6 +460,17 @@ window-rule {
     open-floating true
 }
 
+// Brave's picture in picture video
+window-rule {
+    match title=r#"^Picture-in-picture$"#
+    open-floating true
+    // Set size (480x270 pixels)
+    default-column-width { fixed 480; }
+    default-window-height { fixed 270; }
+    // Set position (32px from bottom-left corner)
+    default-floating-position x=32 y=32 relative-to="bottom-right"
+}
+
 window-rule {
     match app-id=r#"com.github.taiko2k.tauonmb"#
     default-column-width { fixed 900; }
