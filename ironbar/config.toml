@@ -46,6 +46,18 @@ on_scroll_down = "playerctl position 2+"
 mode = "middle"
 max_length = 48
 
+[monitors.DP-1.start.marquee_popup_artist]
+enable = true
+max_length = 64
+
+[monitors.DP-1.start.marquee_popup_album]
+enable = true
+max_length = 64
+
+[monitors.DP-1.start.marquee_popup_title]
+enable = true
+max_length = 64
+
 [[monitors.DP-1.center]]
 type = "clock"
 format = "%H:%M"
