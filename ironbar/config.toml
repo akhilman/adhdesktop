@@ -52,15 +52,15 @@ max_length = 32
 
 [monitors.DP-1.start.marquee_popup_artist]
 enable = true
-max_length = 64
+max_length = 48
 
 [monitors.DP-1.start.marquee_popup_album]
 enable = true
-max_length = 64
+max_length = 48
 
 [monitors.DP-1.start.marquee_popup_title]
 enable = true
-max_length = 64
+max_length = 48
 
 [[monitors.DP-1.center]]
 type = "clock"
