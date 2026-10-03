@@ -31,6 +31,10 @@ on_click_right = "python3 ~/.config/adhdesktop/scripts/volume-control.py toggle"
 on_scroll_up = "python3 ~/.config/adhdesktop/scripts/volume-control.py 2+"
 on_scroll_down = "python3 ~/.config/adhdesktop/scripts/volume-control.py 2-"
 
+[monitors.DP-1.start.marquee]
+enable = true
+max_length = 32
+
 [[monitors.DP-1.start]]
 type = "music"
 name = "player-control"
