@@ -161,7 +161,7 @@ output "Samsung Electric Company SME1920 HLJZC00390" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=0 y=150
+    position x=0 y=250
 
     background-color "#000000"
 }
