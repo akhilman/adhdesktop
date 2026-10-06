@@ -632,6 +632,8 @@ binds {
     XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
 
     Ctrl+XF86AudioPlay   allow-when-locked=true { spawn-sh "python3 ~/.config/adhdesktop/scripts/fuzzel-audio-sink.py"; }
+    Ctrl+XF86AudioNext   allow-when-locked=true { spawn "playerctld" "shift"; }
+    Ctrl+XF86AudioPrev   allow-when-locked=true { spawn "playerctld" "unshift"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
