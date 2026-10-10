@@ -89,6 +89,9 @@ input {
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     focus-follows-mouse max-scroll-amount="15%"
+
+    // Switching to the same workspace by index twice will switch back to the previous workspace.
+    workspace-auto-back-and-forth
 }
 
 // You can configure outputs by their name, which you can find
@@ -455,7 +458,8 @@ window-rule {
     match app-id=r#"xfce4-appfinder$"#
     // open-fullscreen true
     open-floating true
-    default-column-width { fixed 1400; }
+    default-column-width { fixed 640; }
+    default-window-height { proportion 0.8; }
 }
 
 // Open Thunar's rename dialog as floating window
